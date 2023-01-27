@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/rcm.min.css" />
+    <title>RCM.js</title>
+</head>
+
+<body>
+
+    <script src="./repo/js/rcm.js"></script>
+    <script>
+        
+        rcm({
+            theme: 'dark',
+            header: {
+                items: [
+                    {
+                        icon: 'fas fa-home',
+                        click: () => {
+                            console.log('Home clicked')
+                        }
+                    },
+                    {
+                        icon: 'fas fa-user',
+                        click: () => {
+                            console.log('User clicked!')
+                        }
+                    },
+                    {
+                        icon: 'fas fa-sign-out-alt',
+                        color: 'danger',
+                        click: () => {
+                            console.log('Logout clicked!')
+                        }
+                    }
+
+                ]
+            },
+            sections: [
+                {
+                    items: [
+                        {
+                            text: 'Copy',
+                            icon: 'fas fa-copy',
+                            shortcuts: [ 'Ctrl', 'c' ],
+                            color: 'success',
+                            click: () => {
+                                console.log('Copy clicked!')
+                            }
+                        },{
+                            text: 'Cut',
+                            icon: 'fas fa-cut',
+                            shortcuts: [ 'Ctrl', 'x' ],
+                            color: 'success',
+                            disabled: true,
+                            click: () => {
+                                console.log('Cut clicked!')
+                            }
+                        }
+                    ]
+                },
+                {
+                    items: [
+                        {
+                            text: 'Delete',
+                            icon: 'fas fa-trash-alt',
+                            color: 'danger',
+                            click: () => {
+                                console.log('Delete clicked!')
+                            }
+                        }
+                    ]
+                }
+            ]
+        })
+
+    </script>
+</body>
+
+</html>
